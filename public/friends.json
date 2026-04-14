@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Mitchell",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "email": "sarah.mitchell@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Roommate from freshman year. We bonded over late-night study sessions and bad dining hall food. She moved to Vancouver after grad school.",
+    "goal": 14,
+    "next_due_date": "2025-07-14"
+  },
+  {
+    "id": 2,
+    "name": "Daniel Okafor",
+    "picture": "https://randomuser.me/api/portraits/men/34.jpg",
+    "email": "daniel.okafor@outlook.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["work", "mentor"],
+    "bio": "Senior engineer who mentored me at my first job. Incredibly sharp and always willing to give honest feedback. We grab coffee virtually every few weeks.",
+    "goal": 14,
+    "next_due_date": "2025-07-28"
+  },
+  {
+    "id": 3,
+    "name": "Priya Nair",
+    "picture": "https://randomuser.me/api/portraits/women/45.jpg",
+    "email": "priya.nair@protonmail.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["childhood", "close friend"],
+    "bio": "Grew up two houses down from each other. We've stayed close despite living in different cities for the past eight years. Loves cooking and sends me recipes.",
+    "goal": 10,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 4,
+    "name": "Marcus Webb",
+    "picture": "https://randomuser.me/api/portraits/men/58.jpg",
+    "email": "marcuswebb@hey.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": ["travel", "adventure"],
+    "bio": "Met backpacking through Southeast Asia in 2019. We still talk about that week in Chiang Mai. He's the person I call when I'm planning any trip.",
+    "goal": 21,
+    "next_due_date": "2025-07-10"
+  },
+  {
+    "id": 5,
+    "name": "Leila Hosseini",
+    "picture": "https://randomuser.me/api/portraits/women/67.jpg",
+    "email": "leila.h@icloud.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["book club", "close friend"],
+    "bio": "We met at a local book club and immediately clicked over our shared obsession with literary fiction. She recommends at least one book a month that I end up loving.",
+    "goal": 7,
+    "next_due_date": "2025-07-21"
+  },
+  {
+    "id": 6,
+    "name": "Tom Pearce",
+    "picture": "https://randomuser.me/api/portraits/men/22.jpg",
+    "email": "tom.pearce@gmail.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["college", "old friend"],
+    "bio": "We were inseparable in college but drifted after moving to different states. Still have years of inside jokes and a shared love for bad sci-fi movies.",
+    "goal": 30,
+    "next_due_date": "2025-07-05"
+  },
+  {
+    "id": 7,
+    "name": "Anika Sharma",
+    "picture": "https://randomuser.me/api/portraits/women/29.jpg",
+    "email": "anika.sharma@fastmail.com",
+    "days_since_contact": 8,
+    "status": "almost due",
+    "tags": ["work", "gym"],
+    "bio": "Colleagues turned friends. We started working out together during the pandemic over video call and still keep each other accountable. One of the most disciplined people I know.",
+    "goal": 7,
+    "next_due_date": "2025-07-17"
+  },
+  {
+    "id": 8,
+    "name": "Carlos Reyes",
+    "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+    "email": "carlos.reyes@yahoo.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["family friend", "neighbor"],
+    "bio": "Our families have known each other for over a decade. He and I started hanging out independently as adults and found out we have way more in common than just our parents being friends.",
+    "goal": 14,
+    "next_due_date": "2025-07-30"
+  }
+]
