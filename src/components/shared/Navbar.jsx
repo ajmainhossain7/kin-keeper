@@ -11,7 +11,7 @@ const navLinks = [
 ];
 
 const linkClass = ({ isActive }) =>
-    `flex items-center gap-1.5 px-4 py-1.5 rounded-md text-sm font-medium transition-colors border-0 cursor-pointer no-underline
+    `flex items-center gap-1.5 px-4 py-1.5 rounded-sm text-sm font-medium transition-colors border-0 cursor-pointer no-underline
     ${isActive
         ? 'bg-[#1e4d3b] text-white'
         : 'bg-transparent text-[#444] hover:bg-[#f0f9f4] hover:text-[#1e4d3b]'
@@ -29,7 +29,7 @@ const Navbar = () => {
 
     return (
         <nav className="w-full bg-white border-b border-gray-200 px-4 md:px-8">
-            <div className="max-w-7xl mx-auto flex items-center justify-between h-14">
+            <div className="container mx-auto flex items-center justify-between h-14">
 
                 {/* Logo */}
                 <h2 className="text-[#1e4d3b] font-bold text-2xl tracking-tight select-none m-0">
