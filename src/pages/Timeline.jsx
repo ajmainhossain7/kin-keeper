@@ -14,6 +14,30 @@ const Timeline = () => {
   const { timeline } = useTimeline();
   const [filter, setFilter] = useState("All");
 
+  const formatDateTime = (dateStr) =>
+    new Date(dateStr).toLocaleString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    });
+
+  const formatRelative = (dateStr) => {
+    const diff = Date.now() - new Date(dateStr);
+    const mins = Math.floor(diff / 60000);
+
+    if (mins < 1) return "Just now";
+    if (mins < 60) return `${mins} min ago`;
+
+    const hours = Math.floor(mins / 60);
+    if (hours < 24) return `${hours} hr ago`;
+
+    const days = Math.floor(hours / 24);
+    return `${days} day ago`;
+  };
+
   const filteredData =
     filter === "All"
       ? timeline
@@ -24,9 +48,10 @@ const Timeline = () => {
       <div className="max-w-2xl mx-auto">
 
         <h1 className="text-3xl font-bold text-[#0f2d22] mb-6">Timeline</h1>
+
+        {/* Filter */}
         <div className='mb-6 flex justify-start'>
           <div className='dropdown dropdown-start'>
-
             <div
               tabIndex={0}
               role="button"
@@ -58,7 +83,6 @@ const Timeline = () => {
                 </li>
               ))}
             </ul>
-
           </div>
         </div>
 
@@ -75,6 +99,7 @@ const Timeline = () => {
           </div>
         )}
 
+        {/* Timeline list */}
         <div className='flex flex-col gap-1'>
           {filteredData.map((item) => {
             const cfg = typeConfig[item.type] || typeConfig["Call"];
@@ -94,7 +119,16 @@ const Timeline = () => {
                     <span className='font-semibold'>{item.type}</span>
                     <span className='text-gray-400'> with {item.name}</span>
                   </p>
-                  <p className='text-xs text-gray-400 mt-0.5'>{item.date}</p>
+
+                  <div className="flex flex-col mt-1">
+                    <span className='text-xs text-gray-500'>
+                      {formatRelative(item.date)}
+                    </span>
+                    <span className='text-[11px] text-gray-300'>
+                      {formatDateTime(item.date)}
+                    </span>
+                  </div>
+
                 </div>
               </div>
             );

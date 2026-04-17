@@ -10,7 +10,7 @@ export const TimelineProvider = ({ children }) => {
       id: Date.now(),
       type,
       name,
-      date: new Date().toLocaleDateString(),
+      date: new Date().toISOString(), // ✅ FIX
     };
 
     setTimeline((prev) => [newEntry, ...prev]);
