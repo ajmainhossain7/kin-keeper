@@ -2,6 +2,7 @@ import React from 'react';
 
 import useFriends from '../../hooks/useFriends';
 import { useNavigate } from 'react-router';
+import LoadingSpinner from '../../ui/LoadingSpinner';
 
 const statusConfig = {
     "on-track": { label: "On Track", bg: "bg-emerald-100", text: "text-emerald-700", dot: "bg-emerald-500" },
@@ -27,7 +28,7 @@ const Friends = () => {
     const { friends, loading, error } = useFriends();
     const navigate = useNavigate();
 
-    if (loading) return <p className='text-center text-sm text-gray-400 py-10'>Loading...</p>;
+    if (loading) return <LoadingSpinner />;
     if (error) return <p className='text-center text-sm text-red-400 py-10'>{error}</p>;
 
     return (
