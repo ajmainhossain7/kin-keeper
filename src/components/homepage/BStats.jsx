@@ -4,9 +4,6 @@ import useFriends from '../../hooks/useFriends';
 const BStats = () => {
     const { friends } = useFriends();
 
-    // if (loading) return <p className="text-center text-sm text-gray-400 py-10">Loading...</p>;
-    // if (error)   return <p className="text-center text-sm text-red-400 py-10">{error}</p>;
-
     const total = friends.length;
     const onTrack = friends.filter((f) => f.status === "on-track").length;
     const needAttention = friends.filter((f) => f.status !== "on-track").length;
@@ -20,12 +17,12 @@ const BStats = () => {
     ];
 
     return (
-        <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 text-center">
+        <div className='container mx-auto px-4'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 text-center'>
                 {stats.map(({ value, label }) => (
-                    <div key={label} className="bg-white p-10 rounded-lg border border-gray-100">
-                        <p className="text-3xl font-bold text-[#0f2d22]">{value}</p>
-                        <p className="text-sm text-gray-400 mt-1">{label}</p>
+                    <div key={label} className='bg-white p-10 rounded-lg border border-gray-100'>
+                        <p className='text-3xl font-bold text-[#0f2d22]'>{value}</p>
+                        <p className='text-sm text-gray-400 mt-1'>{label}</p>
                     </div>
                 ))}
             </div>

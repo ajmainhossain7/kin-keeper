@@ -27,34 +27,34 @@ const Friends = () => {
     const { friends, loading, error } = useFriends();
     const navigate = useNavigate();
 
-    if (loading) return <p className="text-center text-sm text-gray-400 py-10">Loading...</p>;
-    if (error) return <p className="text-center text-sm text-red-400 py-10">{error}</p>;
+    if (loading) return <p className='text-center text-sm text-gray-400 py-10'>Loading...</p>;
+    if (error) return <p className='text-center text-sm text-red-400 py-10'>{error}</p>;
 
     return (
-        <div className="container mx-auto py-12 px-4">
-            <hr className="border-[#80808035]" />
+        <div className='container mx-auto py-12 px-4'>
+            <hr className='border-[#80808035]' />
 
-            <h2 className="text-lg font-bold text-[#0f2d22] mt-8 mb-5">Your Friends</h2>
+            <h2 className='text-lg font-bold text-[#0f2d22] mt-8 mb-5'>Your Friends</h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4'>
                 {friends.map((friend) => {
                     const st = statusConfig[friend.status] || statusConfig["on-track"];
                     return (
                         <div
                             key={friend.id}
                             onClick={() => navigate(`/friends/${friend.id}`)}
-                            className="bg-white rounded-2xl border border-gray-100 p-5 flex flex-col items-center gap-3 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+                            className='bg-white rounded-2xl border border-gray-100 p-5 flex flex-col items-center gap-3 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer'
                         >
                             <img
                                 src={friend.picture}
                                 alt={friend.name}
-                                className="w-16 h-16 rounded-full object-cover ring-2 ring-[#d4ede2]"
+                                className='w-16 h-16 rounded-full object-cover ring-2 ring-[#d4ede2]'
                             />
-                            <div className="text-center">
-                                <p className="text-sm font-semibold text-[#0f2d22]">{friend.name}</p>
-                                <p className="text-xs text-gray-400">{friend.days_since_contact}d ago</p>
+                            <div className='text-center'>
+                                <p className='text-sm font-semibold text-[#0f2d22]'>{friend.name}</p>
+                                <p className='text-xs text-gray-400'>{friend.days_since_contact}d ago</p>
                             </div>
-                            <div className="flex flex-wrap gap-1 justify-center">
+                            <div className='flex flex-wrap gap-1 justify-center'>
                                 {friend.tags.map((tag) => (
                                     <span key={tag} className={`text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide ${tagColor(tag)}`}>
                                         {tag}

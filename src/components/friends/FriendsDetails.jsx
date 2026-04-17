@@ -62,7 +62,6 @@ const FriendsDetails = () => {
     </div>
   );
 
-  // ✅ existing handleClick — your logic preserved
   const handleClick = (type) => {
     addEntry(type, friend.name);
     toast.success(`${type} with ${friend.name} added!`, {
@@ -83,7 +82,6 @@ const FriendsDetails = () => {
     month: "short", day: "numeric", year: "numeric"
   });
 
-  // Recent interactions from context filtered by this friend
   const recentInteractions = timeline
     .filter((t) => t.name === friend.name)
     .slice(0, 4);
@@ -108,7 +106,7 @@ const FriendsDetails = () => {
 
         <div className="flex flex-col md:flex-row gap-5">
 
-          {/* ── LEFT COLUMN ── */}
+          {/* LEFT COLUMN */}
           <div className="flex flex-col gap-4 w-full md:w-64 shrink-0">
 
             {/* Profile card */}
@@ -152,7 +150,7 @@ const FriendsDetails = () => {
             </div>
           </div>
 
-          {/* ── RIGHT COLUMN ── */}
+          {/* RIGHT COLUMN  */}
           <div className="flex flex-col gap-4 flex-1">
 
             {/* Stats row */}
@@ -180,7 +178,7 @@ const FriendsDetails = () => {
               </p>
             </div>
 
-            {/* ✅ Quick Check-In — your handleClick preserved */}
+            {/*  Quick Check — handleClick preserved */}
             <div className="bg-white rounded-2xl border border-gray-100 p-5">
               <p className="text-sm font-bold text-[#0f2d22] mb-4">Quick Check-In</p>
               <div className="grid grid-cols-3 gap-3">

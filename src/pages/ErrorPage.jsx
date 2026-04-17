@@ -3,7 +3,6 @@ export default function NotFound404() {
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-6 py-16 font-sans">
       <div className="flex flex-col items-center gap-6 max-w-md w-full text-center">
 
-        {/* Icon */}
         <div
           className="rounded-full bg-[#f0f9f4] border border-[#a8d5bf] flex items-center justify-center"
           style={{ width: 72, height: 72 }}
@@ -15,12 +14,10 @@ export default function NotFound404() {
           </svg>
         </div>
 
-        {/* Badge */}
         <span className="bg-[#f0f9f4] border border-[#a8d5bf] text-[#1e4d3b] text-xs font-medium tracking-widest uppercase px-4 py-1 rounded-full">
           Error 404
         </span>
 
-        {/* Big number */}
         <div
           className="text-[#1e4d3b] font-bold leading-none select-none"
           style={{ fontSize: 100, letterSpacing: -4 }}
@@ -28,21 +25,17 @@ export default function NotFound404() {
           404
         </div>
 
-        {/* Headline */}
         <h1 className="text-[#0f2d22] text-3xl font-semibold leading-tight m-0">
           Page not found
         </h1>
 
-        {/* Subtext */}
         <p className="text-[#2d6b51] text-base leading-relaxed m-0">
           The page you're looking for doesn't exist or may have been moved to a
           different location.
         </p>
 
-        {/* Divider */}
         <div className="w-10 h-px bg-[#a8d5bf]" />
 
-        {/* Buttons */}
         <div className="flex flex-wrap gap-3 justify-center">
           <button className="bg-[#1e4d3b] hover:bg-[#1a4731] text-white px-7 py-2.5 rounded-lg text-sm font-medium transition-colors cursor-pointer border-0">
             Go home
@@ -52,7 +45,6 @@ export default function NotFound404() {
           </button>
         </div>
 
-        {/* Footer hint */}
         <p className="text-[#3d9970] text-sm m-0">
           If you think this is a mistake,{" "}
           <a
